@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1 class="title">🚀 CRUD APP</h1>
+<h4 class="subtitle">CREATE READ EDIT DELETE</h4>
+<h1>Student App</h1>
+
+<button onclick="toggleDark()">🌙 Dark Mode</button>
+
+<form action="/add" method="POST">
+
+  <input name="name" placeholder="Name" required>
+  <input name="age" placeholder="Age" required>
+
+  <input name="email" placeholder="Email" required>
+  <input name="phone" placeholder="Phone" required>
+  <input name="course" placeholder="Course" required>
+  <input name="city" placeholder="City" required>
+
+  <button type="submit">Add</button>
+
+</form>
+
+<hr>
+
+<ul>
+  <% students.forEach(function(s) { %>
+
+    <li class="card">
+
+      <h3><%= s.name %></h3>
+
+      <% if(s.age) { %><p>Age: <%= s.age %></p><% } %>
+      <% if(s.email) { %><p>Email: <%= s.email %></p><% } %>
+      <% if(s.phone) { %><p>Phone: <%= s.phone %></p><% } %>
+      <% if(s.course) { %><p>Course: <%= s.course %></p><% } %>
+      <% if(s.city) { %><p>City: <%= s.city %></p><% } %>
+
+      <div class="actions">
+        <a href="/edit/<%= s.id %>">Edit</a>
+        <a href="/delete/<%= s.id %>">Delete</a>
+      </div>
+
+    </li>
+
+  <% }) %>
+</ul>
+
+<script>
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+}
+</script>
+<footer class="footer">
+  <h3>🚀 CRUD APP</h3>
+
+  <p>© 2026 All Rights Reserved</p>
+
+  <p>Designed & Developed by <strong>Akash V</strong></p>
+
+  <div class="social-links">
+    <a href="#">📷 Instagram</a>
+    <a href="#">📘 Facebook</a>
+    <a href="#">💼 LinkedIn</a>
+    <a href="#">▶️ YouTube</a>
+  </div>
+</footer>
+</body>
+</html>

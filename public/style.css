@@ -1,0 +1,291 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  margin: 0;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+/* TITLE */
+h1 {
+  margin-top: 20px;
+}
+
+/* FORM */
+form {
+  margin: 20px;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #042446;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* CARD */
+.card {
+  background: white;
+  margin: 15px auto;
+  padding: 15px;
+  width: 320px;
+  border-radius: 15px;
+  list-style: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* DARK CARD */
+body.dark .card {
+  background: #1e1e1e;
+}
+
+/* ACTION BUTTONS */
+.actions a {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.actions a:first-child {
+  background: #28a745;
+}
+
+.actions a:last-child {
+  background: #dc3545;
+}
+
+.actions a:hover {
+  transform: scale(1.1);
+}
+/* DARK MODE BACKGROUND */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+/* DARK MODE CARD */
+body.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+/* DARK MODE INPUT */
+body.dark input {
+  background: #333;
+  color: white;
+}
+
+/* DARK MODE BUTTON */
+body.dark button {
+  background: #0056b3;
+}
+.title {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 40px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+
+  animation: floatTitle 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatTitle {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 5px;
+  margin: 10px auto 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 15px white;
+}
+body.dark .title {
+  background: linear-gradient(90deg, #00d4ff, #6a11cb);
+  box-shadow: 0 8px 25px rgba(0,212,255,0.5);
+}
+/* PAGE LOAD ANIMATION */
+body {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FORM ANIMATION */
+form {
+  animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* INPUT HOVER EFFECT */
+input:hover {
+  box-shadow: 0 0 15px rgba(0,123,255,0.5);
+}
+
+/* CARD IMPROVEMENT */
+.card {
+  animation: popIn 0.6s ease;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* BUTTON EFFECT */
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0,123,255,0.6);
+}
+
+/* ACTION BUTTONS */
+.actions a {
+  transition: all 0.3s ease;
+}
+
+.actions a:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* DARK MODE TITLE */
+body.dark .title {
+  color: white;
+  text-shadow: 0 0 20px #00d4ff;
+}
+
+/* BACK BUTTON */
+a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+a:hover {
+  letter-spacing: 1px;
+}
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(0,0,0,0.1);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #007bff;
+  transform: translateY(-3px);
+}
+
+/* DARK MODE FOOTER */
+body.dark .footer {
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+}
